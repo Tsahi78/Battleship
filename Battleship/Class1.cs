@@ -12,16 +12,15 @@ namespace Battleship
     {
        private string name;
        private int size;
-       private bool sink;
-       private bool horizontal = false;
+       private Boolean sink =false;
+       private Boolean horizontal = false;
        private Point[] point;
 
 
-        public Ships(string name, int size, bool sink, bool horizontal, Point[] point)
+       public Ships(string name, int size, Boolean horizontal, Point[] point)
         {
             this.name = name;
             this.size = size;
-            this.sink = sink;
             this.horizontal = horizontal;
             this.point = point;
         }
@@ -43,28 +42,24 @@ namespace Battleship
             set { size = value; }
         }
 
-        public bool Sink
+        public Boolean Sink
         {
             get { return sink; }
             set { sink = value; }
         }
 
-        public bool Horizontal
+        public Boolean Horizontal
         {
             get { return horizontal; }
             set { horizontal = value; }
         }
 
-        public bool Point
+        public Point[] Point
         {
             get { return point; }
             set { point = value; }
         }
 
 
-        public override string ToString()
-        {
-            return String.Concat(name, size, sink, horizontal);
-        }
     }
 }
